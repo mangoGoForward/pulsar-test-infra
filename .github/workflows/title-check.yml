@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          repository: apache/pulsar-test-infra
+          repository: mangoGoForward/pulsar-test-infra
       - name: Setup Go
         uses: actions/setup-go@v3
         with:
