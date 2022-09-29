@@ -23,3 +23,5 @@ jobs:
         run: go run . title check
         shell: bash
         working-directory: docbot
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
