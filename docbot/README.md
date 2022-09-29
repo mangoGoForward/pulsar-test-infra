@@ -96,7 +96,7 @@ jobs:
         with:
           go-version: 1.18
 
-      - name: Labeling
+      - name: Check PR title
         uses: ./docbot title check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
