@@ -10,7 +10,6 @@ jobs:
   check-pr-title:
     name: Check PR title
     runs-on: ubuntu-latest
-    using: composite
     steps:
       - name: Checkout
         uses: actions/checkout@v3
