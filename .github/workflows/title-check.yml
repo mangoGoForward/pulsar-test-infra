@@ -1,0 +1,26 @@
+name: "Check PR title"
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+
+jobs:
+  check-pr-title:
+    name: Check PR title
+    runs-on: ubuntu-latest
+    using: composite
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          repository: apache/pulsar-test-infra
+      - name: Setup Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: 1.18
+      - name: Execute
+        run: go run . title check
+        shell: bash
+        working-directory: docbot
