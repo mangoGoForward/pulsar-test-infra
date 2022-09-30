@@ -5,6 +5,7 @@ branding:
   icon: 'check'
   color: 'green'
 runs:
+  using: composite
   steps:
     - name: Checkout
       uses: actions/checkout@v3
